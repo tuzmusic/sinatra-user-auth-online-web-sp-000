@@ -27,11 +27,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/sessions/login' do
-    binding.pry
     erb :'sessions/login'
   end
 
   post '/sessions' do
+    binding.pry
     # puts "", params, ""
     @user = User.find_by(email: params['email'], password: params['password'])
     session[:id] = @user.id
