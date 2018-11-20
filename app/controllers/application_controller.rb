@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/sessions/login' do
+    binding.pry
     erb :'sessions/login'
   end
 
